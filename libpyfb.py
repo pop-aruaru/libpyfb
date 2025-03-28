@@ -73,7 +73,7 @@ class Framebuffer():
 
 			t: transparency (default set to 0)
 		'''
-		self.fb.seek(x*y*self.bpp//8) # Set the pixel location
+		self.fb.seek((x+(y*self.screeny))*self.bpp//8) # Set the pixel location
 
 		if self.bpp == 32:
 			# 32 bit per pixel
